@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/react@latest/umd/react.development.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/react-dom@latest/umd/react-dom.development.js"></script>
+    <script
+      src="https://unpkg.com/babel-standalone@latest/babel.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link src="src/style.css" type="stylesheet" />
+    <script type="text/babel">
+      const PC = (props) => {
+        return (
+          <div class="pc">
+            <div class="frame">
+              <iframe
+                src={props.src}
+                width="1280"
+                height="800"
+                title="PC画面"
+              ></iframe>
+            </div>
+          </div>
+        );
+      };
+      const TB = (props) => {
+        return (
+          <div class="tb">
+            <div class="frame">
+              <iframe
+                src={props.src}
+                width="768"
+                height="1024"
+                title="タブレット画面"
+              ></iframe>
+            </div>
+          </div>
+        );
+      };
+      const SP = (props) => {
+        return (
+          <div class="sp">
+            <div class="frame">
+              <iframe
+                src={props.src}
+                width="375"
+                height="667"
+                title="スマホ画面"
+              ></iframe>
+            </div>
+          </div>
+        );
+      };
+      const UrlList = [
+        "https://tailwindcss.com/docs/installation/play-cdn",
+        "https://tailwindcss.com/docs/installation/play-cdn",
+        "https://tailwindcss.com/docs/installation/play-cdn",
+        "https://tailwindcss.com/docs/installation/play-cdn",
+        "https://tailwindcss.com/docs/installation/play-cdn",
+      ];
+      const App = () => {
+        return (
+          <React.Fragment>
+            {UrlList &&
+              UrlList.map((item) => {
+                return <PC src={item} />;
+              })}
+          </React.Fragment>
+        );
+      };
+      ReactDOM.render(<App />, document.body);
+    </script>
+    <script src="src/script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+  </body>
+</html>

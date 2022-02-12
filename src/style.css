@@ -1,0 +1,32 @@
+.frame {
+  height: 0;
+  overflow: hidden;
+}
+
+iframe {
+  transform-origin: 0 0;
+}
+
+.pc .frame {
+  padding-top: 62.5%;
+}
+.pc iframe {
+  margin-top: -62.5%;
+  transform: scale(0.6);
+}
+
+.tb .frame {
+  padding-top: 133.33%;
+}
+.tb iframe {
+  margin-top: -133.33%;
+  transform: scale(0.5586);
+}
+
+.sp .frame {
+  padding-top: 177.87%;
+}
+.sp iframe {
+  margin-top: -177.87%;
+  transform: scale(0.6613);
+}/*# sourceMappingURL=style.css.map */
